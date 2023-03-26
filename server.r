@@ -42,7 +42,7 @@ shinyServer(function(input, output) {
     # Bar chart
     p2 <- ggplot(df_country, aes_string(x = "input$radio_categorical")) +
       geom_bar() +
-      labs(title = paste("Trend of", input$radio_categorical), x = paste("Sorted by", input$radio_categorical), y = "Number of People")+# labels
+      labs(title = paste("Trend of", input$radio_categorical), x = paste("Sorted by", input$radio_categorical), y = "Number of People", legend(color = factor(categorical_variables)))+# labels
       theme(axis.text.x.bottom = element_text(angle = 45),
             legend.position = "bottom") # modify theme to change text angle and legend position
     
