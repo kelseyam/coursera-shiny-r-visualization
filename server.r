@@ -31,7 +31,7 @@ shinyServer(function(input, output) {
         coord_flip() +  # flip coordinates
         labs(title = paste("How", input$radio_continuous,"value is spread")) +
         ylab("Number of People")+
-      xlabs('Age') +  # labels
+      xlabs("Age") +  # labels
         facet_wrap(~prediction)    # facet by prediction
     }
     
